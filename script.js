@@ -8,13 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
+        if (data.error) {
+          displayErrorMessage(data.error.message);
+        } else {
+          displayWeatherData(data);
+          clearErrorMessage();
+        }  
         // Process the weather data
         displayWeatherData(data);
       })
       .catch(error => {
         console.log('Error fetching weather data:', error);
+        displayErrorMessage('could not retrieve weather data. Please try again later.');
       });
-  }
+    }
 
   function displayWeatherData(data) {
     const cityNameElement = document.getElementById('city-name');
@@ -28,11 +35,26 @@ document.addEventListener('DOMContentLoaded', function() {
     humidityElement.textContent = `Humidity: ${data.current.humidity}%`;
   }
 
+  function displayErrorMessage(message) {
+    const errorMessageElement = document.getElementById('error-message');
+    errorMessageElement.textContent = message;
+  }
+   function clearErrorMessage() {
+    const errorMessageElement =document.getElementById('error-message');
+    errorMessageElement.textContent = '';
+   }
+
   // Add an event listener to the search button
   const searchButton = document.getElementById('search-button');
   searchButton.addEventListener('click', function() {
     const cityInput = document.getElementById('city-input');
-    const city = cityInput.value;
+    const city = cityInput.value.trim();
+
+    if (city) {
+      fetchWeatherData(city);
+    } else {
+      displayErrorMessage('Enter a valid City name.');
+    }
 
     fetchWeatherData(city);
   });
@@ -42,9 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault(); // Prevent form submission
 
     const cityInput = document.getElementById('city-input');
-    const city = cityInput.value;
+    const city = cityInput.trim();
 
-    fetchWeatherData(city);
+    if(city) {
+      fetchWeatherData(city);
+    } else {
+      displayErrorMessage('Enter a valid City name.');
+    }
   });
 });  
 
