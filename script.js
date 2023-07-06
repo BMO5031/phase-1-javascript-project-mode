@@ -28,11 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const temperatureElement = document.getElementById('temperature');
     const descriptionElement = document.getElementById('description');
     const humidityElement = document.getElementById('humidity');
+    const windSpeedElement = document.getElementById('wind-speed');
+    const sunriseElement = document.getElementById('sunrise');
+    const sunsetElement = document.getElementById('sunset');
+    const weatherIconElement = document.getElementById('weather-icon');
 
     cityNameElement.textContent = data.location.name;
     temperatureElement.textContent = `Temperature: ${data.current.temp_c}°C`;
     descriptionElement.textContent = `Description: ${data.current.condition.text}`;
     humidityElement.textContent = `Humidity: ${data.current.humidity}%`;
+    windSpeedElement.textContent = `WindSpeed: ${data.current.windspeed}km/h`;
+
   }
 
   function displayErrorMessage(message) {
@@ -55,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       displayErrorMessage('Enter a valid City name.');
     }
-
-    fetchWeatherData(city);
   });
 
   const form = document.querySelector('form');
@@ -64,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault(); // Prevent form submission
 
     const cityInput = document.getElementById('city-input');
-    const city = cityInput.trim();
+    const city = cityInput.value.trim();
 
     if(city) {
       fetchWeatherData(city);
