@@ -1,17 +1,17 @@
-# Weather Mate
+# WEATHER MATE
 
 Weather Mate is a web application that provides current weather information for different cities. Users can search for a city and get details such as temperature, description, humidity, and more.
 
 ![Weather Mate](screenshot.png)
 
-## Features
+## FEATURES
 
 - Search for weather information by city name
 - Display current temperature, description, and humidity
 - Error handling for invalid city names or network errors
 - Responsive design for a seamless experience on different devices
 
-## Technologies Used
+## TECHNOLOGIES USED
 
 - HTML5
 - CSS3
@@ -20,7 +20,7 @@ Weather Mate is a web application that provides current weather information for 
 - Weather API (WeatherAPI) for retrieving weather data
 - Font Awesome for social media icons
 
-## Getting Started
+## GETTING STARTED
 
 1. Clone the repository:
 
@@ -35,32 +35,29 @@ Contributions are welcome! If you have any suggestions or improvements for the p
 License
 
 This project is licensed under the MIT License.
-Acknowledgments
+
+ACKNOWLEDGEMENTS
 
     WeatherAPI for providing the weather data
     Font Awesome for social media icons
     OpenWeatherMap for inspiration and weather API reference.
  
- link to live site : https://bmo5031.github.io/phase-1-javascript-project-mode/
+ LINK TO LIVE SITE : https://bmo5031.github.io/phase-1-javascript-project-mode/
 
-Certainly! Here's an example of a README.md file for your weather app project:
-
-markdown
-
-# Weather Mate
+# WEATHER MATE
 
 Weather Mate is a web application that provides current weather information for different cities. Users can search for a city and get details such as temperature, description, humidity, and more.
 
 ![Weather Mate](screenshot.png)
 
-## Features
+## FEATURES
 
 - Search for weather information by city name
 - Display current temperature, description, and humidity
 - Error handling for invalid city names or network errors
 - Responsive design for a seamless experience on different devices
 
-## Technologies Used
+## TECHNOLOGIES USED
 
 - HTML5
 - CSS3
@@ -69,7 +66,7 @@ Weather Mate is a web application that provides current weather information for 
 - Weather API (WeatherAPI) for retrieving weather data
 - Font Awesome for social media icons
 
-## Getting Started
+## GETTING STARTED
 
 1. Clone the repository:
 
@@ -86,5 +83,5 @@ The app is deployed using GitHub Pages and can be accessed at: Weather Mate
 
 
 
- Author: BRIAN MARTIN OMONDI ODHIAMBO
+ AUTHOR: BRIAN MARTIN OMONDI ODHIAMBO
 
