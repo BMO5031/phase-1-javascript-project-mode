@@ -5,7 +5,25 @@
     <title>WEATHER MATE</title>
   </head>
   <body>
-    <h1>BONJOUR!! / HALLO!!</h1>
+    <header>
+        <h1>Weather Mate!!</h1>
+    </header>
+
+    <main>
+        <div id="location-input">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-button">SEARCH</button>
+        </div>
+
+        <div id="weather-display">
+            <h2 id="city-name"></h2>
+            <div id="weather-info">
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <p id="humidity"></p>
+            </div>
+        </div> 
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
