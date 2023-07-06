@@ -35,5 +35,13 @@ searchButton.addEventListener('click', function() {
     const city = cityInput.Value;
 
     fetchWeatherData(city);
+
+const form = document.querySelector('form');
+form.addEventListener('submit', function(event) {
+    const cityInput = document.getElementById('city-input');
+    const city = cityInput.value;
+
+    fetchWeatherData(city);
+})    
   });
 });
